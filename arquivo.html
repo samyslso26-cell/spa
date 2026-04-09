@@ -3,15 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spa</title>
-    <link rel="stylesheet" href="arquivo.css">
+    <title>SPA Loja</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <h1>Bem-vindo ao SPA</h1>
-    <p> Single Page Application </p>
+
+    <div id="login" class="ativo">
+        <h2>Login</h2>
+        <input id="loginEmail" placeholder="Email"><br>
+        <input id="loginSenha" type="password" placeholder="Senha"><br>
+        <button type="submit">Entrar</button>
+        <p>Ir para Cadastro</p>
+    </div>
+
+    <div id="cadastro">
+        <h2>Cadastro</h2>
+        <input id="cadNome" placeholder="Nome"><br>
+        <input id="cadEmail" placeholder="Email"><br>
+        <input id="cadSenha" type="password" placeholder="Senha"><br>
+
+        <select id="tipo">
+            <option value="user">Usuário</option>
+            <option value="admin">Admin</option>
+        </select><br>
+
+        <button type="submit">Cadastrar</button>
+        <p>Voltar</p>
+    </div>
+
+    <div id="loja">
+        <h2>Loja</h2>
+        <button type="submit">Logout</button><br>
+
+        <input id="busca" placeholder="Buscar produto..." oninput="renderProdutos()">
+
+        <div id="adminArea"></div>
+        <div id="produtos"></div>
+    </div>
+
+    <script src="arquivo.js"></script>
+
 </body>
-<script src="arquivo.js"></script>
 
 </html>
